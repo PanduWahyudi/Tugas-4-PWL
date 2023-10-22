@@ -1,0 +1,102 @@
+//CREATE USER
+POST http://localhost:5000/users
+Content-Type: application/json
+
+{
+    "name": "wahyu",
+    "email": "wahyu@gmail.com",
+    "password": "123456",
+    "confPassword": "123456",
+    "role":"user"
+}
+
+###
+// GET USER
+GET http://localhost:5000/users/
+
+###
+//GET USER BY ID
+GET http://localhost:5000/users/82052fd8-7f1c-499e-8684-13acaf908bbc
+
+###
+//UPDATE DATA USER BY ID
+PATCH http://localhost:5000/users/82052fd8-7f1c-499e-8684-13acaf908bbc
+Content-Type: application/json
+
+{
+    "name": "Wahyu",
+    "email": "wahyu11@gmail.com",
+    "password": "123456",
+    "confPassword": "123456",
+    "role":"user"
+}
+###
+//DELETE USER BY ID
+DELETE http://localhost:5000/users/82052fd8-7f1c-499e-8684-13acaf908bbc
+
+
+###
+//LOGIN USER ADMIN
+POST http://localhost:5000/login
+Content-Type: application/json
+
+
+{
+    "email":"admin@gmail.com",
+    "password":"123456"
+}
+
+###
+//LOGIN USER BIASA
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email":"pandu@gmail.com",
+    "password":"123456"
+}
+
+###
+//CEK LOGIN USER
+GET http://localhost:5000/me
+
+###
+//LOGOUT
+DELETE http://localhost:5000/logout
+
+
+//CREATE PRODUCT
+###
+POST http://localhost:5000/products
+Content-Type: application/json
+
+{
+    "name":"baju hijau",
+    "price":"80000"
+}
+
+###
+//GET ALL PRODUCT
+GET http://localhost:5000/products
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEzIiwiaWF0IjoxNjk3OTc5NTkxLCJleHAiOjE3Mjk1MTU1OTF9.7d2zWugWQw4xN9Gg_07VO1iCYIjyJtAlm8dwCYGZAYc
+
+
+###
+//GET SINGLE PRODUCT BY ID
+GET http://localhost:5000/products/e538af05-9caf-443a-8eac-8e3c203391ed
+
+
+###
+//UPDATE PRODUCT
+PATCH http://localhost:5000/products/e538af05-9caf-443a-8eac-8e3c203391ed
+Content-Type: application/json
+
+{
+    "name":"baju putih",
+    "price":"80000"
+}
+
+###
+//DELETE PRODUCT
+DELETE  http://localhost:5000/products/e538af05-9caf-443a-8eac-8e3c203391ed
+
